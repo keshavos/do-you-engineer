@@ -73,7 +73,6 @@ $>sudo vi ~/.gitconfig
     [alias]
         br = branch
         cm = commit
-        st = status
         gs = status
         gd = diff
         gco = checkout
