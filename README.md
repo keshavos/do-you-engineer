@@ -18,6 +18,7 @@
     - [Shortcuts](#shortcuts)
     - [Handy commands](#handy-commands)
 - [Docker](#docker)
+
 ---
 ## Mac applications
 ### Spectacle
