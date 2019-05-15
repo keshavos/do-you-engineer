@@ -16,8 +16,8 @@
     - [git alias](#gitalias)
     - [Handy git commands](#handy-git-commands)
 - [Docker](#docker)
-## Mac applications
 ---
+## Mac applications
 ### Spectacle
 [Spectacle app](https://www.spectacleapp.com/) - extremely useful tool to organise your apps , move windows between displays. Memorise shortcuts, you won't have to take your fingers off the keyboard as much. 
 
