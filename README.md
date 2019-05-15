@@ -1,40 +1,51 @@
 *DISCLAIMER: Content mentioned on this repository is based on my experience as a developer and the tools and preferences I've gotten accustomed to, over the years.*
 
-# Mac applications
-1. [Spectacle app](https://www.spectacleapp.com/)
+# Contents
+- [Mac applications](#macapplications)
+    - [Spectacle](#spectacle)
+- [Frontend](#frontend)
+    - [nvm](#nvm)
+    - [Debug on a mobile device](#debugonamobiledevice)
+- [VS Code](#vscode)
+    - [settings](#settings)
+    - [extensions](#extensions)
+    - [debugging](#debugging)
+- [iTerm2](#iTerm2)
+- [git](#git)
+    - [gitconfig](#gitconfig)
+    - [git alias](#gitalias)
+    - [Handy git commands](#handy-git-commands)
+- [Docker](#docker)
+## Mac applications
+---
+### Spectacle
+[Spectacle app](https://www.spectacleapp.com/) - extremely useful tool to organise your apps , move windows between displays. Memorise shortcuts, you won't have to take your fingers off the keyboard as much. 
 
-Extremely useful tool to organise your apps , move windows between displays. Memorise shortcuts, you won't have to take your fingers off the keyboard as much. 
+---
 
-
-# Frontend tools, tips and tricks 
-1. nvm
-
+## Frontend
+### nvm
 [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) is a useful tool which helps in maintaining different versions of node on a machine. Particularly useful when you have to switch between different versions often. Also, it's a neater way of organisaing your node environment :)
 Note: installing nvm through Homebrew is no longer supported. 
 
-2. Debug on a mobile device
+### Debug on a mobile device 📝
+---
+## VS Code
+### Extensions 📝
+### Settings📝
+### Debugging 📝
+---
 
-# VS Code
-1. Plugins
-2. Preferences/ Settings
-3. Debugging
-
-# Terminal
-1. iTerm2
-2. Prettify your terminal
-3. Setup an aliases file
-
-
+## iTerm2
 Using the default terminal app is perfectly acceptable. The following are suggestions around how you can avoid performing repititive tasks and focus more on things that require your attention. 
 
-[iterm2](https://www.iterm2.com/) is an amazing replacement for the default terminal app and lets you do a whole bunch of customisation and save preferences so you can 
+[iterm2](https://www.iterm2.com/) is an amazing replacement for the default terminal app and lets you do a whole bunch of customisation and save preferences. 
 
-# git
-1. Setting up your global gitconfig 
-2. Shortcuts
-3. Commands
+### iTerm2 settings 📝
+---
 
-## 1. Setting up your global gitconfig 
+## git
+### gitconfig 
 
 It is handy to keep a list of frequently used git commands as aliases and to keep them in a separate file. 
 
@@ -104,10 +115,9 @@ $>sudo vi ~/.gitconfig
 
 the shortcut in the `aliases` above will now let you do `$>gco develop-branch ` instead of `$>git checout develop-branch`. #winning!
 
-## 2. Shortcuts
+### Shortcuts 📝
 
-## 3. Commands
-
+### Commands
 a. Revert all the changes to `index.html` file to 1 commit before `9b02747010d493f7b`:
 
 ```
@@ -120,7 +130,7 @@ Create a new worktree with a new branch `BUG-123` in a one up folder (assuming y
 ```
 git worktree add -b BUG-123 ../BUG-123-directory remotes/origin/bugfix/BUG-123-fixes-build
 ```
-
-# Tips to people who are starting out
+---
+## 2 cents
 1. Become friends with the command line early on. Don't let it intimidate you. It gives you a deeper understanding of how stuff actually works. Once you gain some experience and expertise, you can always switch to a GUI (if you then wish).
 2. Learn about git branching models - any organisation/ project follows more or less similar strategy. Atlasian has a good article [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
