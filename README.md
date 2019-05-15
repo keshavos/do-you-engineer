@@ -1,20 +1,22 @@
 *DISCLAIMER: Content mentioned on this repository is based on my experience as a developer and the tools and preferences I've gotten accustomed to, over the years.*
 
 # Contents
-- [Mac applications](#macapplications)
+- [Mac applications](#mac-applications)
     - [Spectacle](#spectacle)
 - [Frontend](#frontend)
     - [nvm](#nvm)
-    - [Debug on a mobile device](#debugonamobiledevice)
-- [VS Code](#vscode)
-    - [settings](#settings)
-    - [extensions](#extensions)
-    - [debugging](#debugging)
+    - [Debug on a mobile device](#debug-on-a-mobile-device)
+- [VS Code](#vs-code)
+    - [Settings](#settings)
+    - [Extensions](#extensions)
+    - [Debugging](#debugging)
 - [iTerm2](#iTerm2)
+    - [Settings](#iterm2-settings)
 - [git](#git)
     - [gitconfig](#gitconfig)
-    - [git alias](#gitalias)
-    - [Handy git commands](#handy-git-commands)
+    - [git alias](#git-alias)
+    - [Shortcuts](#shortcuts)
+    - [Handy commands](#handy-commands)
 - [Docker](#docker)
 ---
 ## Mac applications
@@ -32,8 +34,8 @@
 ### Debug on a mobile device 📝
 ---
 ## VS Code
-### Extensions 📝
 ### Settings📝
+### Extensions 📝
 ### Debugging 📝
 ---
 
@@ -42,7 +44,7 @@ Using the default terminal app is perfectly acceptable. The following are sugges
 
 [iterm2](https://www.iterm2.com/) is an amazing replacement for the default terminal app and lets you do a whole bunch of customisation and save preferences. 
 
-### iTerm2 settings 📝
+### Settings 📝
 ---
 
 ## git
@@ -113,12 +115,12 @@ $>sudo vi ~/.gitconfig
     [difftool "p4mergetool"]
         cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 ```
-
-the shortcut in the `aliases` above will now let you do `$>gco develop-branch ` instead of `$>git checout develop-branch`. #winning!
+### git alias 📝
+*Add stuff about adding a separate file for maintaining aliases. Also link to aliases within the iTerm section*
 
 ### Shortcuts 📝
 
-### Commands
+### Handy Commands
 a. Revert all the changes to `index.html` file to 1 commit before `9b02747010d493f7b`:
 
 ```
