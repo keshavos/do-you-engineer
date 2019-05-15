@@ -26,7 +26,8 @@
 ## Frontend
 ### nvm
 [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) is a useful tool which helps in maintaining different versions of node on a machine. Particularly useful when you have to switch between different versions often. Also, it's a neater way of organisaing your node environment :)
-Note: installing nvm through Homebrew is no longer supported. 
+
+**Note: installing nvm through Homebrew is no longer supported**
 
 ### Debug on a mobile device 📝
 ---
