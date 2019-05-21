@@ -1,11 +1,9 @@
-*DISCLAIMER: Content mentioned on this repository is based on my experience as a developer and the tools and preferences I've gotten accustomed to, over the years.*
-
 # Contents
 - [Mac applications](#mac-applications)
     - [Spectacle](#spectacle)
-- [Frontend](#frontend)
-    - [nvm](#nvm)
-    - [Debug on a mobile device](#debug-on-a-mobile-device)
+- [nvm](#nvm)
+    - [Install node versions and set default](#install-node-versions-and-set-default)
+- [Debug on a mobile device](#debug-on-a-mobile-device)
 - [VS Code](#vs-code)
     - [Settings](#settings)
     - [Extensions](#extensions)
@@ -15,9 +13,9 @@
 - [git](#git)
     - [gitconfig](#gitconfig)
     - [git alias](#git-alias)
-    - [Shortcuts](#shortcuts)
-    - [Handy commands](#handy-commands)
+    - [Handy git commands](#handy-git-commands)
 - [Docker](#docker)
+- [Learning Resources](http://google.co.uk)
 
 ---
 ## Mac applications
@@ -57,37 +55,32 @@ $>nvm alias default 10.0.0
 ### Settings📝
 
 ### Extensions
-[Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
-[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+#### Git
+* [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+* [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
 
-[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+#### Web development
+* [ES6 code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+* [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+* [jshint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+* [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+* [Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
+* [Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
+* [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
+* [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 
-[EditorConfig for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+#### Settings, Prettifiers
+* [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+* [EditorConfig for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+* [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+* [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
-[Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-[Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
-
-[ES6 code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
-
-[HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
-
-[jshint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
-
-[TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
-
-[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
-
-[Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
-
-[CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
-
-[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-
-[Atlasian for VS Code](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
-
-[Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
+#### Vendors
+* [Atlasian for VS Code](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+* [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
 
 ### Debugging 📝
 ---
@@ -156,7 +149,7 @@ $>sudo vi ~/.gitconfig
         excludesfile = /Users/<your username folder>/.gitignore_global
 ```
 
-*Additional: I use [P4Merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge) as my diff and mergetool. Add the following settings if that is your preferred tool*
+*To set [P4Merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge) as your diff and mergetool. Add the following settings to your gitconfig file*
 ```
     [merge]
         tool = p4mergetool
@@ -168,25 +161,37 @@ $>sudo vi ~/.gitconfig
     [difftool "p4mergetool"]
         cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 ```
-### git alias 📝
-*Add stuff about adding a separate file for maintaining aliases. Also link to aliases within the iTerm section*
+### git alias
+It is easier to manage all your aliases within a single [~/.bash_aliases](resources/root/.bash_aliases) file. Specify all git related aliases within a dedicated section. 
 
-### Shortcuts 📝
-
-### Handy Commands
+### Handy git commands
 a. Revert all the changes to `index.html` file to 1 commit before `9b02747010d493f7b`:
-
 ```
 $>git checkout 9b02747010d493f7b~1 public/src/index.html
+```
+Show only local branches: 
+```
+git branch
+```
+List all local branches and the remote branches that they’re tracking:
+```
+git branch -vv
+```
+List all local and remote branches:
+```
+git branch -a
+```
+Search for a specific branch (local or remote):
+```
+git branch -a | grep 'branch name'
 ```
 
 b. Worktrees
 
 Create a new worktree with a new branch `BUG-123` in a one up folder (assuming you are currently in the root of your project directory) named `BUG-123-directory` and make it track remote branch `remotes/origin/bugfix/BUG-123-fixes-build`:
 ```
-git worktree add -b BUG-123 ../BUG-123-directory remotes/origin/bugfix/BUG-123-fixes-build
+$>git worktree add -b BUG-123 ../BUG-123-directory remotes/origin/bugfix/BUG-123-fixes-build
 ```
 ---
-## 2 cents
-1. Become friends with the command line early on. Don't let it intimidate you. It gives you a deeper understanding of how stuff actually works. Once you gain some experience and expertise, you can always switch to a GUI (if you then wish).
-2. Learn about git branching models - any organisation/ project follows more or less similar strategy. Atlasian has a good article [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+### Learning Resources
+* [git branching models](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
