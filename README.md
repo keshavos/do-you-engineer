@@ -28,15 +28,67 @@
 
 ## Frontend
 ### nvm
-[nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) is a useful tool which helps in maintaining different versions of node on a machine. Particularly useful when you have to switch between different versions often. Also, it's a neater way of organisaing your node environment :)
+[nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) is a useful tool which helps in maintaining different versions of node on a machine. Particularly useful when you have to switch between different versions often. Also, it's a neater way of organisaing your node environment. 
 
 **Note: installing nvm through Homebrew is no longer supported**
+
+Update `~/.bash_profile` or your `~/.bashrc` with the following line at the end of the file:
+```
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # Load NVM
+```
+
+#### Install node versions and set default
+
+Install node . 
+```
+$>nvm install 8.9.4
+$>nvm install 10.0.0
+$>nvm install 10.0.0
+```
+Set the default node version to use across the system:
+```
+$>nvm alias default 10.0.0
+```
 
 ### Debug on a mobile device 📝
 ---
 ## VS Code
+
 ### Settings📝
-### Extensions 📝
+
+### Extensions
+[Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+
+[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+
+[EditorConfig for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+[Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+[Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+
+[ES6 code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+
+[HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+
+[jshint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+
+[TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+
+[Intellisense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
+
+[Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
+
+[CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
+
+[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+
+[Atlasian for VS Code](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+
+[Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
+
 ### Debugging 📝
 ---
 
