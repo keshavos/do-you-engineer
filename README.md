@@ -2,8 +2,8 @@
 - [Mac applications](#mac-applications)
     - [Spectacle](#spectacle)
 - [nvm](#nvm)
-    - [Install node versions and set default](#install-node-versions-and-set-default)
-- [Debug on a mobile device](#debug-on-a-mobile-device)
+    - [Installation and defaults](#installation-and-defaults)
+- [Debug on mobile device](#debug-on-mobile-device)
 - [VS Code](#vs-code)
     - [Settings](#settings)
     - [Extensions](#extensions)
@@ -12,7 +12,7 @@
     - [Settings](#iterm2-settings)
 - [git](#git)
     - [gitconfig](#gitconfig)
-    - [git alias](#git-alias)
+    - [git aliases](#git-aliases)
     - [Handy git commands](#handy-git-commands)
 - [Docker](#docker)
 - [Learning Resources](http://google.co.uk)
@@ -23,8 +23,6 @@
 [Spectacle app](https://www.spectacleapp.com/) - extremely useful tool to organise your apps , move windows between displays. Memorise shortcuts, you won't have to take your fingers off the keyboard as much. 
 
 ---
-
-## Frontend
 ### nvm
 [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) is a useful tool which helps in maintaining different versions of node on a machine. Particularly useful when you have to switch between different versions often. Also, it's a neater way of organisaing your node environment. 
 
@@ -35,7 +33,7 @@ Update `~/.bash_profile` or your `~/.bashrc` with the following line at the end 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # Load NVM
 ```
 
-#### Install node versions and set default
+#### Installation and defaults
 
 Install node . 
 ```
@@ -48,11 +46,22 @@ Set the default node version to use across the system:
 $>nvm alias default 10.0.0
 ```
 
-### Debug on a mobile device 📝
+### Debug on mobile device 📝
+```
+[Charles app](https://www.charlesproxy.com/), Chrome Dev tools, setup etc.,
+```
 ---
 ## VS Code
 
 ### Settings📝
+
+```
+
+
+Settings, preferences etc.,
+
+
+```
 
 ### Extensions
 
@@ -86,68 +95,27 @@ $>nvm alias default 10.0.0
 ---
 
 ## iTerm2
-Using the default terminal app is perfectly acceptable. The following are suggestions around how you can avoid performing repititive tasks and focus more on things that require your attention. 
+[iterm2](https://www.iterm2.com/) is an amazing replacement for the default terminal app and lets you customise and save preferences (tab arrangements, fonts, color schemes etc.,). 
 
-[iterm2](https://www.iterm2.com/) is an amazing replacement for the default terminal app and lets you do a whole bunch of customisation and save preferences. 
+The [resources/](resources/) includes a Synthwave iterm [color scheme](resources/iterm2/synthwave84.itermcolors). 
 
 ### Settings 📝
+```
+Shortcuts for create and split a tab horizontally, vertically, saving current tab arrangement, adding profiles, badges, commands to send at startup etc.,
+```
 ---
 
 ## git
 ### gitconfig 
 
-It is handy to keep a list of frequently used git commands as aliases and to keep them in a separate file. 
+The global git config file should exist in the root (`~/.`) as `~/.gitconfig`
 
-
-a. Set up a global git configuration file
-
-
-If you don't already have a global git config file setup already, feel free to use the the template below and modify as required. 
+Set up global git configuration file
 ```
-$>touch ~/.gitconfig
 $>sudo vi ~/.gitconfig
 ```
-`~/.gitconfig` contents:
-```
-    [color]
-        ui = auto
-    [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
-    [color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
-    [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
-        [mergetool "p4merge"]
-        cmd = /Applications/P4Merge.app/Contents/MacOS/p4merge $BASE $LOCAL $REMOTE $MERGED
-        keepTemporaries = false
-        trustExitCode = false
-        keepBackup = false
-        prompt = false
-    [alias]
-        br = branch
-        cm = commit
-        gs = status
-        gd = diff
-        gco = checkout
-    [help]
-        autocorrect = 1
-    [pull]
-        rebase = true
-    [user]
-        name = <Your name here without the brackets>
-        email = <Add your email here and without the angle brackets>
-    [color]
-        ui = auto
-    [core]
-        excludesfile = /Users/<your username folder>/.gitignore_global
-```
+
+If you don't already have a global git config file setup already, create a `~/.gitconfig` and update with the settings provided in the [template](resources/root/.gitconfig). More on setting up the git configuration file [here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config)
 
 *To set [P4Merge](https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge) as your diff and mergetool. Add the following settings to your gitconfig file*
 ```
@@ -161,32 +129,21 @@ $>sudo vi ~/.gitconfig
     [difftool "p4mergetool"]
         cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 ```
-### git alias
-It is easier to manage all your aliases within a single [~/.bash_aliases](resources/root/.bash_aliases) file. Specify all git related aliases within a dedicated section. 
+### git aliases
+It is easier to manage all your aliases within the global [~/.bash_aliases](resources/root/.bash_aliases) file. Specify all git related aliases within a dedicated section. 
 
 ### Handy git commands
-a. Revert all the changes to `index.html` file to 1 commit before `9b02747010d493f7b`:
 ```
-$>git checkout 9b02747010d493f7b~1 public/src/index.html
+$>git checkout 9b02747010d493f7b public/src/index.html (Revert to the exact specified SHA)
+$>git checkout 9b02747010d493f7b~1 public/src/index.html (Revert to 1 commit before the specified SHA)
+$>git branch (Show only local branches)
+$>git branch -vv (List all local branches and the remote branches that they’re tracking)
+$>git branch -a (List all local and remote branches)
+$>git branch -a | grep 'branch name' (Search for a specific branch (local or remote))
 ```
-Show only local branches: 
-```
-git branch
-```
-List all local branches and the remote branches that they’re tracking:
-```
-git branch -vv
-```
-List all local and remote branches:
-```
-git branch -a
-```
-Search for a specific branch (local or remote):
-```
-git branch -a | grep 'branch name'
-```
+Worktrees
 
-b. Worktrees
+[git worktrees](https://git-scm.com/docs/git-worktree) are an excellent and inexpensive way of creating, switching to and working on parallel branches without disturbing your current branch. 
 
 Create a new worktree with a new branch `BUG-123` in a one up folder (assuming you are currently in the root of your project directory) named `BUG-123-directory` and make it track remote branch `remotes/origin/bugfix/BUG-123-fixes-build`:
 ```
