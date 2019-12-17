@@ -1,4 +1,5 @@
 # Contents
+
 - [Mac applications](#mac-applications)
     - [Spectacle](#spectacle)
 - [nvm](#nvm)
